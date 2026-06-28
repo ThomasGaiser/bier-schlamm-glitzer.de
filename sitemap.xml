@@ -24,4 +24,10 @@
     <loc>https://bier-schlamm-glitzer.de/festival-freunde-buch/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url></urlset>
+  </url>
+  <url>
+    <loc>https://bier-schlamm-glitzer.de/glitzerpulver/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
