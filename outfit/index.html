@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Festival Outfit – Bier, Schlamm & Glitzer ✨</title>
+<meta name="description" content="Das perfekte Festival-Outfit – Tipps, Empfehlungen und Inspiration für deinen nächsten Festival-Auftritt.">
+<meta property="og:title" content="Festival Outfit">
+<meta property="og:description" content="Tipps, Empfehlungen und Inspiration für deinen nächsten Festival-Auftritt.">
+<!-- Cookiebot CMP -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ee620da7-14a8-44b0-a4f7-074a5e720215" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Analytics 4 (consent-gesteuert via Cookiebot) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-12998GXV89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
+</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --neon-pink: #f85cbc;
+    --neon-green: #39ff14;
+    --neon-purple: #bf5fff;
+    --dark-bg: #0a0a0f;
+    --dark-card: #13131a;
+    --dark-border: #2a2a3a;
+    --text-main: #f0eeff;
+    --text-muted: #8888aa;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  /* === HERO === */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.25rem 2rem;
+    text-align: center;
+  }
+
+  .back-link {
+    position: fixed;
+    top: 1.25rem;
+    left: 1.25rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    z-index: 10;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--text-main); }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255,45,120,0.15);
+    border: 1px solid rgba(255,45,120,0.4);
+    color: var(--neon-pink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title .line1 {
+    display: block;
+    color: var(--neon-pink);
+    text-shadow: 0 0 40px rgba(255,45,120,0.5);
+  }
+
+  .hero-title .line2 {
+    display: block;
+    color: var(--neon-green);
+    text-shadow: 0 0 40px rgba(57,255,20,0.4);
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 480px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  /* CTA Button */
+  .cta-btn {
+    display: inline-block;
+    background: var(--neon-pink);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 0 30px rgba(255,45,120,0.4);
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 50px rgba(171,246,76,0.5);
+    background: #abf64c;
+    color: #0a0a0f;
+  }
+
+  /* === SECTION === */
+  .section {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .section-headline {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+
+  .section-body {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* === FOOTER === */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    border-top: 1px solid var(--dark-border);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--text-main); }
+
+  .affiliate-note {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<a href="/lineup" class="back-link">← Alle Produkte</a>
+
+<section class="hero">
+  <span class="badge">Bier, Schlamm &amp; Glitzer</span>
+  <h1 class="hero-title">
+    <span class="line1">Festival</span>
+    <span class="line2">Outfit</span>
+  </h1>
+  <p class="hero-sub">Hier kommt bald Content. Diese Seite ist noch im Aufbau.</p>
+  <a href="/lineup" class="cta-btn">← Alle Produkte</a>
+</section>
+
+<section class="section">
+  <p class="section-label">Coming Soon</p>
+  <h2 class="section-headline">Hier entsteht etwas Besonderes</h2>
+  <p class="section-body">Diese Seite wird gerade aufgebaut. Schau bald wieder vorbei.</p>
+</section>
+
+<footer>
+  <p class="affiliate-note">Diese Seite kann Affiliate-Links enthalten. Bei einem Kauf erhalten wir eine kleine Provision – für dich entstehen keine Mehrkosten.</p>
+  <p><a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a></p>
+</footer>
+
+</body>
+</html>
