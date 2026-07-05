@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Festival Outfit – Bier, Schlamm & Glitzer ✨</title>
-<meta name="description" content="Das perfekte Festival-Outfit – Tipps, Empfehlungen und Inspiration für deinen nächsten Festival-Auftritt.">
-<meta property="og:title" content="Festival Outfit">
-<meta property="og:description" content="Tipps, Empfehlungen und Inspiration für deinen nächsten Festival-Auftritt.">
+<title>Festival Outfit – Bier, Schlamm &amp; Glitzer ✨</title>
+<meta name="description" content="Paulas komplettes Festival-Outfit von Kopf bis Fuß – alle Teile direkt auf Amazon.">
+<meta property="og:title" content="Festival Outfit – Bier, Schlamm &amp; Glitzer">
+<meta property="og:description" content="Von Kopf bis Fuß – Paulas kompletter Look für dein nächstes Festival.">
 <!-- Cookiebot CMP -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ee620da7-14a8-44b0-a4f7-074a5e720215" data-blockingmode="auto" type="text/javascript"></script>
 <!-- Google Analytics 4 (consent-gesteuert via Cookiebot) -->
@@ -24,6 +24,7 @@
     --neon-pink: #f85cbc;
     --neon-green: #39ff14;
     --neon-purple: #bf5fff;
+    --neon-orange: #ff4f28;
     --dark-bg: #0a0a0f;
     --dark-card: #13131a;
     --dark-border: #2a2a3a;
@@ -52,19 +53,7 @@
     opacity: 0.5;
   }
 
-  /* === HERO === */
-  .hero {
-    position: relative;
-    z-index: 1;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 1.25rem 2rem;
-    text-align: center;
-  }
-
+  /* Back link */
   .back-link {
     position: fixed;
     top: 1.25rem;
@@ -76,6 +65,16 @@
     transition: color 0.2s;
   }
   .back-link:hover { color: var(--text-main); }
+
+  /* === HEADER === */
+  .site-header {
+    position: relative;
+    z-index: 1;
+    padding: 5rem 1.25rem 2.5rem;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
 
   .badge {
     display: inline-block;
@@ -91,141 +90,354 @@
     margin-bottom: 1.5rem;
   }
 
-  .hero-title {
+  .page-title {
     font-size: clamp(2.4rem, 8vw, 4.5rem);
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
-  .hero-title .line1 {
+  .page-title .line1 {
     display: block;
     color: var(--neon-pink);
-    text-shadow: 0 0 40px rgba(255,45,120,0.5);
+    text-shadow: 0 0 40px rgba(248,92,188,0.5);
   }
 
-  .hero-title .line2 {
+  .page-title .line2 {
     display: block;
     color: var(--neon-green);
     text-shadow: 0 0 40px rgba(57,255,20,0.4);
   }
 
-  .hero-sub {
-    font-size: clamp(1rem, 3vw, 1.25rem);
+  .page-tagline {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     color: var(--text-muted);
-    max-width: 480px;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
-  }
-
-  /* CTA Button */
-  .cta-btn {
-    display: inline-block;
-    background: var(--neon-pink);
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 800;
-    text-decoration: none;
-    padding: 1rem 2.5rem;
-    border-radius: 6px;
-    letter-spacing: 0.02em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    box-shadow: 0 0 30px rgba(255,45,120,0.4);
-  }
-
-  .cta-btn:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 0 50px rgba(171,246,76,0.5);
-    background: #abf64c;
-    color: #0a0a0f;
-  }
-
-  /* === SECTION === */
-  .section {
-    position: relative;
-    z-index: 1;
-    padding: 4rem 1.25rem;
-    max-width: 600px;
+    max-width: 420px;
     margin: 0 auto;
   }
 
-  .section-label {
-    font-size: 0.72rem;
+  /* === HERO IMAGE === */
+  .hero-img-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1.25rem 1rem;
+  }
+
+  .hero-img-wrap img {
+    max-height: 70vh;
+    width: auto;
+    max-width: min(360px, 90vw);
+    border-radius: 16px;
+    box-shadow:
+      0 0 80px rgba(248,92,188,0.2),
+      0 0 40px rgba(57,255,20,0.1),
+      0 40px 100px rgba(0,0,0,0.6);
+  }
+
+  /* === PRODUCT GRID === */
+  .outfit-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    .outfit-grid { grid-template-columns: 1fr; }
+  }
+
+  /* === PRODUCT CARD === */
+  .product-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 24px 60px rgba(0,0,0,0.5),
+      0 0 40px rgba(248,92,188,0.08);
+  }
+
+  /* Card image crop */
+  .card-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--dark-border);
+  }
+
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .product-card:hover .card-img img {
+    transform: scale(1.06);
+  }
+
+  /* Card body */
+  .card-body {
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+
+  .card-eyebrow {
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--neon-green);
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-bottom: 0.5rem;
   }
 
-  .section-headline {
-    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  .card-title {
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
     font-weight: 900;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.65rem;
     letter-spacing: -0.01em;
-    text-align: center;
+    line-height: 1.2;
   }
 
-  .section-body {
+  .card-desc {
     color: var(--text-muted);
+    font-size: 0.85rem;
     line-height: 1.7;
-    font-size: 1rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .card-sep {
+    height: 1px;
+    background: var(--dark-border);
+    margin-bottom: 1.1rem;
+  }
+
+  .btn {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border-radius: 7px;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
     text-align: center;
+    width: 100%;
+  }
+
+  .btn-primary {
+    background: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(248,92,188,0.3);
+  }
+
+  .btn-primary:hover {
+    background: #abf64c;
+    color: #0a0a0f;
+    box-shadow: 0 0 30px rgba(171,246,76,0.4);
+    transform: translateY(-2px);
   }
 
   /* === FOOTER === */
   footer {
     position: relative;
     z-index: 1;
-    text-align: center;
-    padding: 2.5rem 1.25rem;
+    background: var(--dark-card);
     border-top: 1px solid var(--dark-border);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 0.72rem;
     color: var(--text-muted);
-    font-size: 0.8rem;
+    line-height: 1.8;
   }
 
   footer a {
     color: var(--text-muted);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
-
   footer a:hover { color: var(--text-main); }
-
-  .affiliate-note {
-    font-size: 0.7rem;
-    font-style: italic;
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-    opacity: 0.7;
-  }
 </style>
 </head>
 <body>
 
 <a href="/lineup" class="back-link">← Alle Produkte</a>
 
-<section class="hero">
+<!-- HEADER -->
+<header class="site-header">
   <span class="badge">✨ Bier, Schlamm &amp; Glitzer ✨</span>
-  <h1 class="hero-title">
+  <h1 class="page-title">
     <span class="line1">Festival</span>
     <span class="line2">Outfit</span>
   </h1>
-  <p class="hero-sub">Dein Festival-Outfit. Curated mit Liebe, Glitzer und zu wenig Schlaf.</p>
-  <a href="/lineup" class="cta-btn">← Alle Produkte</a>
-</section>
+  <p class="page-tagline">Von Kopf bis Fuß – Paulas kompletter Look. Curated mit Liebe, Glitzer und zu wenig Schlaf.</p>
+</header>
 
-<section class="section">
-  <p class="section-label">Coming Soon</p>
-  <h2 class="section-headline">Hier entsteht etwas Besonderes</h2>
-  <p class="section-body">Die besten Festival-Outfits – von Kopf bis Fuß. Schau bald wieder vorbei.</p>
-</section>
+<!-- HERO IMAGE -->
+<div class="hero-img-wrap">
+  <img src="/outfit/paula-ner-outfit.webp" alt="Paula Ner im kompletten Festival-Outfit">
+</div>
 
+<!-- PRODUCT GRID -->
+<main class="outfit-grid" aria-label="Outfit-Teile">
+
+  <!-- 1: Sonnenbrille -->
+  <article class="product-card" aria-label="Aviator-Sonnenbrille">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Blaue verspiegelte Aviator-Sonnenbrille" style="object-position: center 20%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Sonnenbrille</p>
+      <h2 class="card-title">Verspiegelte Aviator-Brille</h2>
+      <p class="card-desc">Blau verspiegelt, oversized, polarisiert. Kein Bock auf Augenkontakt – genau die Energie.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/Joopin-Sonnenbrille-Polarisiert-Verspiegelte-Metallrahmen/dp/B0BNVVP1J2?th=1&linkCode=ll2&tag=bsg-outfit-21&linkId=e61b4f9e034a20ae2386625dfc820044&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2: Glitzer-Gems -->
+  <article class="product-card" aria-label="Glitzer-Gems fürs Gesicht">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Bio-Glitzer Gems fürs Gesicht" style="object-position: center 15%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Face Gems</p>
+      <h2 class="card-title">Bio-Glitzer für die Wange</h2>
+      <p class="card-desc">Kristalle auf der Wange – bio, plastikfrei, direktes Statement. Kein Festival ohne.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/Birkenspanner-Bio-Glitzer-Biologisch-Plastikfrei-auftragen/dp/B0DFVM2TS9?th=1&linkCode=ll2&tag=bsg-outfit-21&linkId=f54a64a0ad222d0a99dba431f7bbc8c9&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3: Jeansjacke -->
+  <article class="product-card" aria-label="Oversized Jeansjacke">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Oversized hellblaue Jeansjacke" style="object-position: center 37%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Jacke</p>
+      <h2 class="card-title">Oversized Jeansjacke</h2>
+      <p class="card-desc">Hellblau, offen, oversized. Morgens zu kalt, mittags zu warm – trotzdem immer dabei.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/ONLTIA-DNM-Jacket-BEX179-NOOS/dp/B07PRY4QKC?th=1&psc=1&linkCode=ll2&tag=bsg-outfit-21&linkId=7d15d415918e94836d580c9afdcaa208&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4: Bikini-Top -->
+  <article class="product-card" aria-label="Gelbes Bandeau-Top">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Gelbes Triangel Bandeau-Bikini-Top" style="object-position: center 33%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Top</p>
+      <h2 class="card-title">Gelbes Bandeau-Top</h2>
+      <p class="card-desc">Wenn die Sonne rauskommt und du bereit bist. Triangel-Bikini-Top in Knallgelb.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/Durio-Triangel-Bikinihose-K%C3%B6rpchen-Verstellbar/dp/B0C69DYMPC?th=1&psc=1&linkCode=ll2&tag=bsg-outfit-21&linkId=d0f2ec6388c985ee0c4986b4e6bbe958&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5: Shorts -->
+  <article class="product-card" aria-label="Rote High-Waist Shorts">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Rote High-Waist Denim-Shorts" style="object-position: center 56%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Shorts</p>
+      <h2 class="card-title">Rote High-Waist Shorts</h2>
+      <p class="card-desc">Rote Denim-Shorts, High-Waist. Schlamm-resistent? Nein. Trotzdem unverzichtbar.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/Cipo-Baxx-Damen-Shorts-Baumwollanteil/dp/B0F8VYR98S?th=1&psc=1&linkCode=ll2&tag=bsg-outfit-21&linkId=58568f9e2bfc43825e1e7c88471b9d6d&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6: Socken -->
+  <article class="product-card" aria-label="Pinke Knöchelsocken">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Pinke Knöchelsocken" style="object-position: center 79%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Socken</p>
+      <h2 class="card-title">Pinke Knöchelsocken</h2>
+      <p class="card-desc">Pink, knöchelhoch, atmungsaktiv. Weil auch die Details stimmen müssen.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/HappyTraining-Sport-Socken-atmungsaktiv-thermoregulierend-Zehenbereich/dp/B0D4WYX24K?th=1&psc=1&linkCode=ll2&tag=bsg-outfit-21&linkId=fa7453755da16d5200b2d2b049f68235&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 7: Converse -->
+  <article class="product-card" aria-label="Gelbe Converse Chuck Taylors">
+    <div class="card-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Gelbe Converse Chuck Taylor High-Tops" style="object-position: center 91%;">
+    </div>
+    <div class="card-body">
+      <p class="card-eyebrow">Schuhe</p>
+      <h2 class="card-title">Gelbe Chuck Taylors</h2>
+      <p class="card-desc">Gelbe Converse Chuck Taylor High-Tops. Werden dreckig. Macht sie nur besser.</p>
+      <div class="card-sep"></div>
+      <div class="card-actions">
+        <a href="https://www.amazon.de/Chuck-Taylor-Star-Malden-Street/dp/B0C3RQSS4W?&linkCode=ll2&tag=bsg-outfit-21&linkId=20b9d8d847da0493cd8251f9dee16731&ref_=as_li_ss_tl"
+           target="_blank" rel="noopener sponsored"
+           class="btn btn-primary">Auf Amazon ansehen ✨*</a>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- AFFILIATE NOTE -->
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);font-style:italic;margin:0;padding:2rem 1rem 2.5rem;">* Affiliate-Links: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Für dich entstehen keine Mehrkosten.</p>
+
+<!-- FOOTER -->
 <footer>
-  <p class="affiliate-note">Diese Seite kann Affiliate-Links enthalten. Bei einem Kauf erhalten wir eine kleine Provision – für dich entstehen keine Mehrkosten.</p>
-  <p><a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a></p>
+  <nav style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem;" aria-label="Social Media">
+    <a href="https://www.tiktok.com/@bier.schlamm.glitzer" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">TikTok</a>
+    <a href="https://www.instagram.com/bier.schlamm.glitzer/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">Instagram</a>
+    <a href="https://www.youtube.com/@bier.schlamm.glitzer" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">YouTube</a>
+    <a href="https://de.pinterest.com/bierschlammglitzer/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">Pinterest</a>
+  </nav>
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem;">© 2026 Bier, Schlamm &amp; Glitzer ✨</p>
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem;">
+    <a href="/impressum">Impressum</a> &nbsp;·&nbsp;
+    <a href="/datenschutz">Datenschutz</a>
+  </p>
 </footer>
 
 </body>
