@@ -182,11 +182,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(var(--card-zoom, 1.6));
     transition: transform 0.4s ease;
   }
 
   .product-card:hover .card-img img {
-    transform: scale(1.06);
+    transform: scale(calc(var(--card-zoom, 1.6) + 0.1));
   }
 
   /* Card body */
@@ -296,8 +297,8 @@
 
   <!-- 1: Sonnenbrille -->
   <article class="product-card" aria-label="Aviator-Sonnenbrille">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Blaue verspiegelte Aviator-Sonnenbrille" style="object-position: center 20%;">
+    <div class="card-img" style="--card-zoom: 5.0;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Blaue verspiegelte Aviator-Sonnenbrille" style="object-position: 51% 21%; transform-origin: 51% 21%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Sonnenbrille</p>
@@ -314,13 +315,13 @@
 
   <!-- 2: Glitzer-Gems -->
   <article class="product-card" aria-label="Glitzer-Gems fürs Gesicht">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Bio-Glitzer Gems fürs Gesicht" style="object-position: center 15%;">
+    <div class="card-img" style="--card-zoom: 2.6;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Bio-Glitzer Gems fürs Gesicht" style="object-position: 52% 19%; transform-origin: 52% 19%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Face Gems</p>
       <h2 class="card-title">Bio-Glitzer für die Wange</h2>
-      <p class="card-desc">Plastikfrei, bio, 100 % abbaubar. Dein Körper leidet sowieso – die Natur muss das nicht auch noch.</p>
+      <p class="card-desc">Plastikfrei, bio, 100 % abbaubar. Dein Körper leidet genug auf dem Festival – die Natur muss das nicht auch noch.</p>
       <div class="card-sep"></div>
       <div class="card-actions">
         <a href="https://www.amazon.de/Birkenspanner-Bio-Glitzer-Biologisch-Plastikfrei-auftragen/dp/B0DFVM2TS9?th=1&linkCode=ll2&tag=bsg-outfit-21&linkId=f54a64a0ad222d0a99dba431f7bbc8c9&ref_=as_li_ss_tl"
@@ -332,8 +333,8 @@
 
   <!-- 3: Jeansjacke -->
   <article class="product-card" aria-label="Oversized Jeansjacke">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Oversized hellblaue Jeansjacke" style="object-position: center 37%;">
+    <div class="card-img" style="--card-zoom: 1.2;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Oversized hellblaue Jeansjacke" style="object-position: center 43%; transform-origin: center 43%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Jacke</p>
@@ -350,8 +351,8 @@
 
   <!-- 4: Bikini-Top -->
   <article class="product-card" aria-label="Gelbes Bandeau-Top">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Gelbes Triangel Bandeau-Bikini-Top" style="object-position: center 33%;">
+    <div class="card-img" style="--card-zoom: 2.2;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Gelbes Triangel Bandeau-Bikini-Top" style="object-position: 51% 39%; transform-origin: 51% 39%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Top</p>
@@ -368,8 +369,8 @@
 
   <!-- 5: Shorts -->
   <article class="product-card" aria-label="Rote High-Waist Shorts">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Rote High-Waist Denim-Shorts" style="object-position: center 56%;">
+    <div class="card-img" style="--card-zoom: 2.2;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Rote High-Waist Denim-Shorts" style="object-position: 50% 61%; transform-origin: 50% 61%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Shorts</p>
@@ -386,8 +387,8 @@
 
   <!-- 6: Socken -->
   <article class="product-card" aria-label="Pinke Knöchelsocken">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Pinke Knöchelsocken" style="object-position: center 79%;">
+    <div class="card-img" style="--card-zoom: 2.0;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Pinke Knöchelsocken" style="object-position: 33% 100%; transform-origin: 33% 100%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Pinke Socken</p>
@@ -404,8 +405,8 @@
 
   <!-- 7: Converse -->
   <article class="product-card" aria-label="Gelbe Converse Chuck Taylors">
-    <div class="card-img">
-      <img src="/outfit/paula-ner-outfit.webp" alt="Gelbe Converse Chuck Taylor High-Tops" style="object-position: center 91%;">
+    <div class="card-img" style="--card-zoom: 1.8;">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Gelbe Converse Chuck Taylor High-Tops" style="object-position: 25% 100%; transform-origin: 25% 100%;">
     </div>
     <div class="card-body">
       <p class="card-eyebrow">Schuhe</p>
