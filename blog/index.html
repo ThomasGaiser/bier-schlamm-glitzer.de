@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – Bier, Schlamm &amp; Glitzer ✨</title>
+<meta name="description" content="Der Bier, Schlamm & Glitzer Blog – demnächst mit Festival-Tipps, Storys und mehr von Paula Ner.">
+<meta property="og:title" content="Blog – Bier, Schlamm &amp; Glitzer">
+<meta property="og:description" content="Demnächst: Festival-Tipps, Storys und mehr von Paula Ner.">
+<!-- Cookiebot CMP -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ee620da7-14a8-44b0-a4f7-074a5e720215" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Analytics 4 (consent-gesteuert via Cookiebot) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-12998GXV89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
+</script>
+<link rel="stylesheet" href="/assets/nav.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --neon-pink: #f85cbc;
+    --neon-green: #39ff14;
+    --dark-bg: #0a0a0f;
+    --dark-card: #13131a;
+    --dark-border: #2a2a3a;
+    --text-main: #f0eeff;
+    --text-muted: #8888aa;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  .coming-soon {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.25rem;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255,45,120,0.15);
+    border: 1px solid rgba(255,45,120,0.4);
+    color: var(--neon-pink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    color: var(--neon-pink);
+    text-shadow: 0 0 40px rgba(248,92,188,0.5);
+  }
+
+  .sub {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--neon-pink);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0.85rem 1.75rem;
+    border-radius: 7px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 0 20px rgba(248,92,188,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .btn:hover {
+    background: #abf64c;
+    color: #0a0a0f;
+    box-shadow: 0 0 30px rgba(171,246,76,0.4);
+    transform: translateY(-2px);
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    background: var(--dark-card);
+    border-top: 1px solid var(--dark-border);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  footer a:hover { color: var(--text-main); }
+</style>
+</head>
+<body>
+
+<!-- SITE HEADER / NAVIGATION -->
+<header class="bsg-header">
+  <div class="bsg-header-inner">
+    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="bsg-nav" id="bsgNav" aria-label="Hauptnavigation">
+      <a href="/" class="bsg-nav-link">Home</a>
+      <a href="/festival-freunde-buch/" class="bsg-nav-link">Freundebuch</a>
+      <div class="bsg-nav-dropdown" id="bsgDropdown">
+        <div class="bsg-nav-dropdown-trigger">
+          <a href="/empfehlungen/" class="bsg-nav-link">Empfehlungen</a>
+          <button type="button" class="bsg-nav-caret" id="bsgDropdownCaret" aria-expanded="false" aria-controls="bsgDropdownMenu" aria-label="Untermenü Empfehlungen ein-/ausblenden">▾</button>
+        </div>
+        <div class="bsg-nav-dropdown-menu" id="bsgDropdownMenu">
+          <a href="/outfit/" class="bsg-nav-sublink">Outfit</a>
+          <a href="/glitzerpulver/" class="bsg-nav-sublink">Glitzerpulver</a>
+        </div>
+      </div>
+      <a href="/blog/" class="bsg-nav-link active" aria-current="page">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<!-- COMING SOON -->
+<main class="coming-soon">
+  <span class="badge">✨ Bald verfügbar ✨</span>
+  <h1>Hier entstehen<br>bald Artikel</h1>
+  <p class="sub">Der Blog ist noch leer – aber nicht mehr lange. Bald gibt's hier Festival-Tipps, Behind-the-Scenes und mehr von Paula Ner.</p>
+  <a href="/" class="btn">Zurück zur Startseite</a>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <nav style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem;" aria-label="Social Media">
+    <a href="https://www.tiktok.com/@bier.schlamm.glitzer" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">TikTok</a>
+    <a href="https://www.instagram.com/bier.schlamm.glitzer/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">Instagram</a>
+    <a href="https://www.youtube.com/@bier.schlamm.glitzer" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">YouTube</a>
+    <a href="https://de.pinterest.com/bierschlammglitzer/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">Pinterest</a>
+  </nav>
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem;">© 2026 Bier, Schlamm &amp; Glitzer ✨</p>
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem;">
+    <a href="/impressum">Impressum</a> &nbsp;·&nbsp;
+    <a href="/datenschutz">Datenschutz</a>
+  </p>
+</footer>
+
+<script src="/assets/nav.js" defer></script>
+</body>
+</html>

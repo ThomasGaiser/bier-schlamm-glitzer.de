@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empfehlungen – Bier, Schlamm &amp; Glitzer ✨</title>
+<meta name="description" content="Paula Ners Festival-Empfehlungen: das komplette Outfit und das Glitzerpulver für deinen Drink.">
+<meta property="og:title" content="Empfehlungen – Bier, Schlamm &amp; Glitzer">
+<meta property="og:description" content="Paula Ners Festival-Empfehlungen auf einen Blick – Outfit und Glitzerpulver.">
+<!-- Cookiebot CMP -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ee620da7-14a8-44b0-a4f7-074a5e720215" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Analytics 4 (consent-gesteuert via Cookiebot) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-12998GXV89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
+</script>
+<link rel="stylesheet" href="/assets/nav.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --neon-pink: #f85cbc;
+    --neon-green: #39ff14;
+    --neon-purple: #bf5fff;
+    --neon-orange: #ff4f28;
+    --dark-bg: #0a0a0f;
+    --dark-card: #13131a;
+    --dark-border: #2a2a3a;
+    --text-main: #f0eeff;
+    --text-muted: #8888aa;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  /* === PAGE HEADER === */
+  .site-header {
+    position: relative;
+    z-index: 1;
+    padding: 3.5rem 1.25rem 2.5rem;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255,45,120,0.15);
+    border: 1px solid rgba(255,45,120,0.4);
+    color: var(--neon-pink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-title {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    color: var(--neon-pink);
+    text-shadow: 0 0 40px rgba(248,92,188,0.5);
+  }
+
+  .page-tagline {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* === RECOMMENDATION GRID === */
+  .rec-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 560px) {
+    .rec-grid { grid-template-columns: 1fr; }
+  }
+
+  /* === RECOMMENDATION CARD === */
+  .rec-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .rec-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 24px 60px rgba(0,0,0,0.5),
+      0 0 40px rgba(248,92,188,0.08);
+  }
+
+  .rec-img {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--dark-border);
+  }
+
+  .rec-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .rec-card:hover .rec-img img { transform: scale(1.06); }
+
+  .rec-body {
+    padding: 1.5rem 1.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .rec-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    margin-bottom: 0.6rem;
+  }
+
+  .rec-title {
+    font-size: clamp(1.15rem, 4vw, 1.4rem);
+    font-weight: 900;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .rec-desc {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .btn {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 7px;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-primary {
+    background: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(248,92,188,0.3);
+  }
+
+  .btn-primary:hover {
+    background: #abf64c;
+    color: #0a0a0f;
+    box-shadow: 0 0 30px rgba(171,246,76,0.4);
+    transform: translateY(-2px);
+  }
+
+  /* === FOOTER === */
+  footer {
+    position: relative;
+    z-index: 1;
+    background: var(--dark-card);
+    border-top: 1px solid var(--dark-border);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  footer a:hover { color: var(--text-main); }
+</style>
+</head>
+<body>
+
+<!-- SITE HEADER / NAVIGATION -->
+<header class="bsg-header">
+  <div class="bsg-header-inner">
+    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="bsg-nav" id="bsgNav" aria-label="Hauptnavigation">
+      <a href="/" class="bsg-nav-link">Home</a>
+      <a href="/festival-freunde-buch/" class="bsg-nav-link">Freundebuch</a>
+      <div class="bsg-nav-dropdown" id="bsgDropdown">
+        <div class="bsg-nav-dropdown-trigger">
+          <a href="/empfehlungen/" class="bsg-nav-link active" aria-current="page">Empfehlungen</a>
+          <button type="button" class="bsg-nav-caret" id="bsgDropdownCaret" aria-expanded="false" aria-controls="bsgDropdownMenu" aria-label="Untermenü Empfehlungen ein-/ausblenden">▾</button>
+        </div>
+        <div class="bsg-nav-dropdown-menu" id="bsgDropdownMenu">
+          <a href="/outfit/" class="bsg-nav-sublink">Outfit</a>
+          <a href="/glitzerpulver/" class="bsg-nav-sublink">Glitzerpulver</a>
+        </div>
+      </div>
+      <a href="/blog/" class="bsg-nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<header class="site-header">
+  <span class="badge">✨ Bier, Schlamm &amp; Glitzer ✨</span>
+  <h1 class="page-title">Empfehlungen</h1>
+  <p class="page-tagline">Alles, was Paula Ner für dein nächstes Festival empfiehlt – kuratiert, getestet, für gut befunden.</p>
+</header>
+
+<!-- RECOMMENDATION GRID -->
+<main class="rec-grid" aria-label="Empfehlungen">
+
+  <!-- Outfit -->
+  <article class="rec-card" aria-label="Festival Outfit">
+    <div class="rec-img">
+      <img src="/outfit/paula-ner-outfit.webp" alt="Paula Ner im kompletten Festival-Outfit" loading="lazy">
+    </div>
+    <div class="rec-body">
+      <p class="rec-eyebrow">Outfit</p>
+      <h2 class="rec-title">Der komplette Look</h2>
+      <p class="rec-desc">Brille, Glitzer, Jacke, Top, Shorts, Socken, Schuhe – Paula Ners ganzes Festival-Outfit, Teil für Teil verlinkt.</p>
+      <a href="/outfit/" class="btn btn-primary">Outfit ansehen →</a>
+    </div>
+  </article>
+
+  <!-- Glitzerpulver -->
+  <article class="rec-card" aria-label="Glitzerpulver">
+    <div class="rec-img">
+      <img src="/glitzerpulver/paula-glitzerpulver.jpg" alt="Paula Ner hält goldenes Glitzer-Bier" loading="lazy">
+    </div>
+    <div class="rec-body">
+      <p class="rec-eyebrow">Glitzerpulver</p>
+      <h2 class="rec-title">Glitzer für den Drink</h2>
+      <p class="rec-desc">Ein Teelöffel, einrühren, fertig: geschmacksneutrales Glitzerpulver, das aus jedem Bier einen goldenen Drink macht.</p>
+      <a href="/glitzerpulver/" class="btn btn-primary">Glitzerpulver ansehen →</a>
+    </div>
+  </article>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <nav style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem;" aria-label="Social Media">
+    <a href="https://www.tiktok.com/@bier.schlamm.glitzer" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">TikTok</a>
+    <a href="https://www.instagram.com/bier.schlamm.glitzer/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">Instagram</a>
+    <a href="https://www.youtube.com/@bier.schlamm.glitzer" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">YouTube</a>
+    <a href="https://de.pinterest.com/bierschlammglitzer/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;" onmouseover="this.style.color='var(--neon-pink)'" onmouseout="this.style.color='var(--text-muted)'">Pinterest</a>
+  </nav>
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem;">© 2026 Bier, Schlamm &amp; Glitzer ✨</p>
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem;">
+    <a href="/impressum">Impressum</a> &nbsp;·&nbsp;
+    <a href="/datenschutz">Datenschutz</a>
+  </p>
+</footer>
+
+<script src="/assets/nav.js" defer></script>
+</body>
+</html>
