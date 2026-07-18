@@ -15,6 +15,7 @@
   gtag('js', new Date());
   gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
 </script>
+<link rel="stylesheet" href="/assets/nav.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -38,15 +39,6 @@ body {
   margin: 0 auto;
   padding: 3rem 1.25rem 5rem;
 }
-.back-link {
-  display: inline-block;
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.85rem;
-  margin-bottom: 2.5rem;
-  transition: color 0.2s;
-}
-.back-link:hover { color: var(--neon-pink); }
 h1 {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 900;
@@ -97,9 +89,32 @@ footer a { color: var(--text-muted); }
 </style>
 </head>
 <body>
-<div class="container">
-  <a href="/lineup" class="back-link">← Zurück</a>
+<!-- SITE HEADER / NAVIGATION -->
+<header class="bsg-header">
+  <div class="bsg-header-inner">
+    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="bsg-nav" id="bsgNav" aria-label="Hauptnavigation">
+      <a href="/" class="bsg-nav-link">Home</a>
+      <a href="/festival-freunde-buch/" class="bsg-nav-link">Freundebuch</a>
+      <div class="bsg-nav-dropdown" id="bsgDropdown">
+        <div class="bsg-nav-dropdown-trigger">
+          <a href="/empfehlungen/" class="bsg-nav-link">Empfehlungen</a>
+          <button type="button" class="bsg-nav-caret" id="bsgDropdownCaret" aria-expanded="false" aria-controls="bsgDropdownMenu" aria-label="Untermenü Empfehlungen ein-/ausblenden">▾</button>
+        </div>
+        <div class="bsg-nav-dropdown-menu" id="bsgDropdownMenu">
+          <a href="/outfit/" class="bsg-nav-sublink">Outfit</a>
+          <a href="/glitzerpulver/" class="bsg-nav-sublink">Glitzerpulver</a>
+        </div>
+      </div>
+      <a href="/blog/" class="bsg-nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
 
+<div class="container">
   <h1>Datenschutz&shy;erklärung</h1>
   <p class="subtitle">Stand: Juni 2026</p>
 
@@ -212,5 +227,6 @@ footer a { color: var(--text-muted); }
   </footer>
 </div>
 
+<script src="/assets/nav.js" defer></script>
 </body>
 </html>

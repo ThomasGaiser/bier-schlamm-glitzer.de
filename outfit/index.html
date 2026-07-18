@@ -17,6 +17,7 @@
   gtag('js', new Date());
   gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
 </script>
+<link rel="stylesheet" href="/assets/nav.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -53,24 +54,11 @@
     opacity: 0.5;
   }
 
-  /* Back link */
-  .back-link {
-    position: fixed;
-    top: 1.25rem;
-    left: 1.25rem;
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.85rem;
-    z-index: 10;
-    transition: color 0.2s;
-  }
-  .back-link:hover { color: var(--text-main); }
-
   /* === HEADER === */
   .site-header {
     position: relative;
     z-index: 1;
-    padding: 5rem 1.25rem 2.5rem;
+    padding: 2.5rem 1.25rem 2.5rem;
     text-align: center;
     max-width: 680px;
     margin: 0 auto;
@@ -275,9 +263,32 @@
 </head>
 <body>
 
-<a href="/lineup" class="back-link">← Alle Produkte</a>
+<!-- SITE HEADER / NAVIGATION -->
+<header class="bsg-header">
+  <div class="bsg-header-inner">
+    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="bsg-nav" id="bsgNav" aria-label="Hauptnavigation">
+      <a href="/" class="bsg-nav-link">Home</a>
+      <a href="/festival-freunde-buch/" class="bsg-nav-link">Freundebuch</a>
+      <div class="bsg-nav-dropdown" id="bsgDropdown">
+        <div class="bsg-nav-dropdown-trigger">
+          <a href="/empfehlungen/" class="bsg-nav-link">Empfehlungen</a>
+          <button type="button" class="bsg-nav-caret" id="bsgDropdownCaret" aria-expanded="false" aria-controls="bsgDropdownMenu" aria-label="Untermenü Empfehlungen ein-/ausblenden">▾</button>
+        </div>
+        <div class="bsg-nav-dropdown-menu" id="bsgDropdownMenu">
+          <a href="/outfit/" class="bsg-nav-sublink active" aria-current="page">Outfit</a>
+          <a href="/glitzerpulver/" class="bsg-nav-sublink">Glitzerpulver</a>
+        </div>
+      </div>
+      <a href="/blog/" class="bsg-nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
 
-<!-- HEADER -->
+<!-- PAGE HEADER -->
 <header class="site-header">
   <span class="badge">✨ Bier, Schlamm &amp; Glitzer ✨</span>
   <h1 class="page-title">
@@ -441,5 +452,6 @@
   </p>
 </footer>
 
+<script src="/assets/nav.js" defer></script>
 </body>
 </html>

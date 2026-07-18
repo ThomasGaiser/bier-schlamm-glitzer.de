@@ -18,6 +18,7 @@
   gtag('js', new Date());
   gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
 </script>
+<link rel="stylesheet" href="/assets/nav.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -521,33 +522,33 @@
     color: #0a0a0f;
   }
 
-  /* Back navigation */
-  .back-nav {
-    position: relative;
-    z-index: 1;
-    padding: 1.25rem 1.25rem 0;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .back-nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-  .back-nav a:hover { color: var(--neon-pink); }
 </style>
 </head>
 <body>
-<nav class="back-nav" aria-label="Navigation">
-  <a href="/lineup">&#8592; Alle Produkte</a>
-</nav>
+<!-- SITE HEADER / NAVIGATION -->
+<header class="bsg-header">
+  <div class="bsg-header-inner">
+    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="bsg-nav" id="bsgNav" aria-label="Hauptnavigation">
+      <a href="/" class="bsg-nav-link">Home</a>
+      <a href="/festival-freunde-buch/" class="bsg-nav-link active" aria-current="page">Freundebuch</a>
+      <div class="bsg-nav-dropdown" id="bsgDropdown">
+        <div class="bsg-nav-dropdown-trigger">
+          <a href="/empfehlungen/" class="bsg-nav-link">Empfehlungen</a>
+          <button type="button" class="bsg-nav-caret" id="bsgDropdownCaret" aria-expanded="false" aria-controls="bsgDropdownMenu" aria-label="Untermenü Empfehlungen ein-/ausblenden">▾</button>
+        </div>
+        <div class="bsg-nav-dropdown-menu" id="bsgDropdownMenu">
+          <a href="/outfit/" class="bsg-nav-sublink">Outfit</a>
+          <a href="/glitzerpulver/" class="bsg-nav-sublink">Glitzerpulver</a>
+        </div>
+      </div>
+      <a href="/blog/" class="bsg-nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
 
 
 <!-- HERO -->
@@ -654,6 +655,6 @@
     </p>
   </footer>
 
-
+<script src="/assets/nav.js" defer></script>
 </body>
 </html>
