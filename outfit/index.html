@@ -64,25 +64,12 @@
     margin: 0 auto;
   }
 
-  .badge {
-    display: inline-block;
-    background: rgba(255,45,120,0.15);
-    border: 1px solid rgba(255,45,120,0.4);
-    color: var(--neon-pink);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.35rem 1rem;
-    border-radius: 100px;
-    margin-bottom: 1.5rem;
-  }
-
   .page-title {
     font-size: clamp(2.4rem, 8vw, 4.5rem);
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
     margin-bottom: 1.25rem;
   }
 
@@ -266,7 +253,7 @@
 <!-- SITE HEADER / NAVIGATION -->
 <header class="bsg-header">
   <div class="bsg-header-inner">
-    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <a href="/" class="bsg-logo"><img src="/paula-avatar-hero.jpg" alt="" class="bsg-logo-img" width="40" height="40" loading="eager"><span>Bier, Schlamm &amp; Glitzer</span></a>
     <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -290,7 +277,6 @@
 
 <!-- PAGE HEADER -->
 <header class="site-header">
-  <span class="badge">✨ Bier, Schlamm &amp; Glitzer ✨</span>
   <h1 class="page-title">
     <span class="line1">Festival</span>
     <span class="line2">Outfit</span>

@@ -169,18 +169,25 @@ main {
 }
 
 .cta-main .cta-img {
+  /* Breite orientiert sich an der Button-Breite weiter unten in der Karte
+     (siehe .cta-btn, ca. 295px bei "Zum Festival Freunde Buch →"), statt
+     das Cover über die volle Kartenbreite zu croppen. */
   width: 100%;
-  max-height: 320px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--dark-border);
+  max-width: 295px;
+  margin: 2rem auto 0;
+  padding: 0;
 }
 
 .cta-main .cta-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 8px;
+  box-shadow:
+    -3px 3px 0 rgba(57,255,20,0.25),
+    3px -3px 0 rgba(255,45,120,0.25),
+    0 20px 50px rgba(0,0,0,0.5);
 }
 
 .cta-main .cta-body {
@@ -295,7 +302,7 @@ main {
 }
 
 .about-title {
-  font-size: 1rem;
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
   font-weight: 900;
   color: var(--neon-pink);
   margin-bottom: 0.85rem;
@@ -304,7 +311,7 @@ main {
 
 .about p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
   line-height: 1.75;
 }
 
@@ -356,7 +363,7 @@ footer .legal a:hover { color: var(--text-main); opacity: 1; }
 <!-- SITE HEADER / NAVIGATION -->
 <header class="bsg-header">
   <div class="bsg-header-inner">
-    <a href="/" class="bsg-logo">✨ Bier, Schlamm &amp; Glitzer</a>
+    <a href="/" class="bsg-logo"><img src="/paula-avatar-hero.jpg" alt="" class="bsg-logo-img" width="40" height="40" loading="eager"><span>Bier, Schlamm &amp; Glitzer</span></a>
     <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -412,7 +419,7 @@ footer .legal a:hover { color: var(--text-main); opacity: 1; }
       </div>
       <div class="cta-body">
         <h2 class="cta-title">Das Festival Freunde Buch</h2>
-        <p class="cta-desc">Euer Erinnerungsbuch für Zeltplatz-Chaos, Ravioli-Dosen und die beste Zeit des Jahres. Zur Überbrückung der Wartezeit habe ich außerdem ein kleines Goodie für dich.</p>
+        <p class="cta-desc">Euer Erinnerungsbuch für Zeltplatz-Chaos, Ravioli-Dosen-Challenges und die beste Zeit des Jahres. Im Buch einfach festhalten, wer am Start war, damit ihr euch auch in Jahren noch dran erinnern könnt.</p>
         <span class="cta-btn">Zum Festival Freunde Buch →</span>
       </div>
     </a>
