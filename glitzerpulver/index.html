@@ -7,7 +7,7 @@
 <meta name="description" content="Goldenes Glitzerpulver für dein Festival-Bier. Vegan, geschmacksneutral, AZO-frei. 1 Dose = über 1000 glitzernde Drinks.">
 <meta property="og:title" content="Glitzerpulver – Bier, Schlamm & Glitzer">
 <meta property="og:description" content="Goldenes Glitzerpulver für Bier, Cocktails & Co. Vegan, geschmacksneutral. 1 Dose = 1000+ Drinks.">
-<meta property="og:image" content="https://www.bier-schlamm-glitzer.de/glitzerpulver/paula-glitzerpulver.jpg">
+<meta property="og:image" content="https://bier-schlamm-glitzer.de/glitzerpulver/paula-glitzerpulver.jpg">
 <!-- Cookiebot CMP -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ee620da7-14a8-44b0-a4f7-074a5e720215" data-blockingmode="auto" type="text/javascript"></script>
 <!-- Google Analytics 4 (consent-gesteuert via Cookiebot) -->
@@ -18,6 +18,7 @@
   gtag('js', new Date());
   gtag('config', 'G-12998GXV89', { 'anonymize_ip': true });
 </script>
+<link rel="stylesheet" href="/assets/nav.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -64,27 +65,6 @@
     justify-content: center;
     padding: 3rem 1.25rem 2rem;
     text-align: center;
-  }
-
-  .badge {
-    display: inline-block;
-    background: rgba(255,215,0,0.12);
-    border: 1px solid rgba(255,215,0,0.4);
-    color: var(--neon-gold);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.35rem 1rem;
-    border-radius: 100px;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-eyebrow {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.05em;
   }
 
   .hero-title {
@@ -358,30 +338,6 @@
     z-index: 1;
   }
 
-  /* Back navigation */
-  .back-nav {
-    position: relative;
-    z-index: 1;
-    padding: 1.25rem 1.25rem 0;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .back-nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .back-nav a:hover { color: var(--neon-gold); }
-
   /* Cookie banner */
   #cookie-banner {
     position: fixed;
@@ -448,28 +404,47 @@
 </head>
 <body>
 
-<nav class="back-nav" aria-label="Navigation">
-  <a href="/lineup">&#8592; Alle Produkte</a>
-</nav>
+<!-- SITE HEADER / NAVIGATION -->
+<header class="bsg-header">
+  <div class="bsg-header-inner">
+    <a href="/" class="bsg-logo"><img src="/paula-avatar-hero.jpg" alt="" class="bsg-logo-img" width="40" height="40" loading="eager"><span>Bier, Schlamm &amp; Glitzer</span></a>
+    <button type="button" class="bsg-nav-toggle" id="bsgNavToggle" aria-expanded="false" aria-controls="bsgNav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="bsg-nav" id="bsgNav" aria-label="Hauptnavigation">
+      <a href="/" class="bsg-nav-link">Home</a>
+      <a href="/festival-freunde-buch/" class="bsg-nav-link">Freundebuch</a>
+      <div class="bsg-nav-dropdown" id="bsgDropdown">
+        <div class="bsg-nav-dropdown-trigger">
+          <a href="/empfehlungen/" class="bsg-nav-link active">Empfehlungen</a>
+          <button type="button" class="bsg-nav-caret" id="bsgDropdownCaret" aria-expanded="false" aria-controls="bsgDropdownMenu" aria-label="Untermenü Empfehlungen ein-/ausblenden">▾</button>
+        </div>
+        <div class="bsg-nav-dropdown-menu" id="bsgDropdownMenu">
+          <a href="/outfit/" class="bsg-nav-sublink">Outfit</a>
+          <a href="/glitzerpulver/" class="bsg-nav-sublink active" aria-current="page">Glitzerpulver</a>
+        </div>
+      </div>
+      <a href="/blog/" class="bsg-nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="hero">
-  <span class="badge">✨ Bier, Schlamm &amp; Glitzer</span>
-  <p class="hero-eyebrow">Das Glitzerpulver für Festival-Drinks</p>
   <h1 class="hero-title">
     <span class="line1">DEIN BIER.</span>
     <span class="line2">NUR MIT</span>
     <span class="line3">MEHR GLITZER.</span>
   </h1>
 
-  <p class="hero-tagline">Ein Teelöffel. Einrühren. Fertig.&nbsp;–<br>und jeder Drink glitzert golden.</p>
+  <p class="hero-tagline">Das Glitzerpulver für Festival-Drinks!<br>Eine Prise. Einrühren. Fertig.<br>Und jeder Drink glitzert wunderbar!</p>
 
   <div class="img-wrap">
     <a href="https://www.amazon.de/Glytter-Glitzerpulver-Getr%C3%A4nke-SILBER-geschmacksneutrales/dp/B0CXQ3WZNY?th=1&amp;linkCode=ll2&amp;tag=bsg-glitzerpulver-21&amp;linkId=5847348be6a3b4881189f096112ba0aa&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Glitzerpulver auf Amazon ansehen"><img src="/glitzerpulver/paula-glitzerpulver.jpg" alt="Paula Ner hält goldenes Glitzer-Bier und glytter Dose" class="product-img" width="340"></a>
   </div>
 
   <p class="hero-sub">
-    Das <strong>glytter Goldpulver</strong> verwandelt jeden Drink in ein Spektakel – geschmacksneutral, vegan und AZO-frei.&nbsp;✨
+    Das <strong>glytter Glitzerpulver</strong> verwandelt jeden Drink in ein Spektakel – geschmacksneutral, vegan und AZO-frei.&nbsp;✨
   </p>
 
   <a href="https://www.amazon.de/Glytter-Glitzerpulver-Getr%C3%A4nke-SILBER-geschmacksneutrales/dp/B0CXQ3WZNY?th=1&linkCode=ll2&tag=bsg-glitzerpulver-21&linkId=5847348be6a3b4881189f096112ba0aa&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" class="cta-btn">
@@ -506,7 +481,7 @@
     <div class="feature-card" role="listitem">
       <span class="feature-icon" aria-hidden="true">😋</span>
       <p class="feature-title">Schmeckt nach nichts</p>
-      <p class="feature-desc">Geschmacksneutral und geruchlos. Nur der Effekt bleibt – purer goldener Glanz in jedem Schluck.</p>
+      <p class="feature-desc">Geschmacksneutral und geruchlos. Nur der Effekt bleibt – purer glitzernder Glanz in jedem Schluck.</p>
     </div>
   </div>
 </section>
@@ -547,8 +522,7 @@
   </p>
 </footer>
 
-
-
+<script src="/assets/nav.js" defer></script>
 </body>
 </html>
 
