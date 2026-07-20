@@ -195,6 +195,21 @@
 @media (max-width: 920px) {
   .bsg-nav-toggle { display: flex; }
 
+  /* Weniger Pflicht-Abstand zwischen Logo und Hamburger, damit auf schmalen
+     Screens nichts über den Viewport hinausgeschoben wird. */
+  .bsg-header-inner { gap: 0.6rem; padding: 0.9rem 1rem; }
+
+  /* Logo muss als Flex-Item unter seine Inhaltsbreite schrumpfen dürfen
+     (Default ist min-width: auto), sonst drückt der lange Schriftzug den
+     Hamburger-Button aus dem sichtbaren Bereich. */
+  .bsg-logo { min-width: 0; gap: 0.4rem; font-size: clamp(0.85rem, 4.2vw, 1.1rem); }
+  .bsg-logo-img { width: 32px; height: 32px; }
+  .bsg-logo span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .bsg-nav {
     display: none;
     position: absolute;
