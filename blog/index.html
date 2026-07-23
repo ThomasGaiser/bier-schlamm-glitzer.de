@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog – Bier, Schlamm &amp; Glitzer ✨</title>
-<meta name="description" content="Der Bier, Schlamm & Glitzer Blog – demnächst mit Festival-Tipps, Storys und mehr von Paula Ner.">
+<meta name="description" content="Der Bier, Schlamm & Glitzer Blog – Festival-Tipps, Vergleiche und Storys rund ums Festival Freunde Buch und mehr von Paula Ner.">
 <meta property="og:title" content="Blog – Bier, Schlamm &amp; Glitzer">
-<meta property="og:description" content="Demnächst: Festival-Tipps, Storys und mehr von Paula Ner.">
+<meta property="og:description" content="Festival-Tipps, Vergleiche und Storys rund ums Festival Freunde Buch und mehr von Paula Ner.">
 <!-- Cookiebot CMP -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ee620da7-14a8-44b0-a4f7-074a5e720215" data-blockingmode="auto" type="text/javascript"></script>
 <!-- Google Analytics 4 (consent-gesteuert via Cookiebot) -->
@@ -53,38 +53,22 @@
     opacity: 0.5;
   }
 
-  .coming-soon {
+  .blog-header {
     position: relative;
     z-index: 1;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 1rem;
     text-align: center;
-    padding: 4rem 1.25rem;
-  }
-
-  .badge {
-    display: inline-block;
-    background: rgba(255,45,120,0.15);
-    border: 1px solid rgba(255,45,120,0.4);
-    color: var(--neon-pink);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.35rem 1rem;
-    border-radius: 100px;
-    margin-bottom: 1.5rem;
   }
 
   h1 {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-size: clamp(2.2rem, 8vw, 3rem);
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
     color: var(--neon-pink);
     text-shadow: 0 0 40px rgba(248,92,188,0.5);
   }
@@ -93,29 +77,66 @@
     font-size: clamp(1rem, 3vw, 1.15rem);
     color: var(--text-muted);
     line-height: 1.7;
-    max-width: 420px;
-    margin-bottom: 2.5rem;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
-  .btn {
-    display: inline-block;
-    background: var(--neon-pink);
-    color: #fff;
-    font-size: 0.95rem;
-    font-weight: 800;
+  .article-grid {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .article-card {
+    display: block;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 10px;
+    overflow: hidden;
     text-decoration: none;
-    padding: 0.85rem 1.75rem;
-    border-radius: 7px;
-    letter-spacing: 0.02em;
-    box-shadow: 0 0 20px rgba(248,92,188,0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    color: inherit;
+    transition: border-color 0.2s;
   }
 
-  .btn:hover {
-    background: #abf64c;
-    color: #0a0a0f;
-    box-shadow: 0 0 30px rgba(171,246,76,0.4);
-    transform: translateY(-2px);
+  .article-card:hover { border-color: var(--neon-pink); }
+
+  .article-card img {
+    width: 100%;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    display: block;
+  }
+
+  .article-card-body { padding: 1.25rem 1.25rem 1.4rem; }
+
+  .article-card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    margin-bottom: 0.5rem;
+  }
+
+  .article-card-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .article-card-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
   }
 
   footer {
@@ -165,12 +186,22 @@
   </div>
 </header>
 
-<!-- COMING SOON -->
-<main class="coming-soon">
-  <span class="badge">✨ Bald verfügbar ✨</span>
-  <h1>Hier entstehen<br>bald Artikel</h1>
-  <p class="sub">Der Blog ist noch leer – aber nicht mehr lange. Bald gibt's hier Festival-Tipps, Behind-the-Scenes und mehr von Paula Ner.</p>
-  <a href="/" class="btn">Zurück zur Startseite</a>
+<!-- BLOG HEADER -->
+<header class="blog-header">
+  <h1>Blog</h1>
+  <p class="sub">Festival-Tipps, Vergleiche und Storys – rund ums Festival Freunde Buch und mehr von Paula Ner.</p>
+</header>
+
+<!-- ARTICLE GRID -->
+<main class="article-grid">
+  <a href="/blog/festival-freundebuch-fuer-erwachsene/" class="article-card">
+    <img src="/blog/festival-freundebuch-fuer-erwachsene/festival-freundebuch-artikel-hero.jpg" alt="" loading="lazy">
+    <div class="article-card-body">
+      <p class="article-card-label">Blog</p>
+      <p class="article-card-title">Festival Freundebuch für Erwachsene: Das lustigste Andenken vom Zeltplatz</p>
+      <p class="article-card-desc">Warum 5 Fragesets mehr bringen als jedes Standard-Freundebuch – der Marktvergleich mit allen wichtigen Kandidaten.</p>
+    </div>
+  </a>
 </main>
 
 <!-- FOOTER -->
