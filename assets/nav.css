@@ -42,12 +42,46 @@
 }
 .bsg-logo:hover { color: #f0eeff; }
 
-.bsg-logo-img {
+.bsg-logo-wrap {
+  position: relative;
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
+}
+
+.bsg-logo-ring {
+  /* Statisch (keine Rotation): bei 40px sorgt eine animierte Drehung eines so
+     schmalen Rings für sichtbare Rundungs-/Antialiasing-Fehler pro Frame
+     ("Eiern", ungleiche Randstärke). Auf der Startseite (180px Hero-Avatar)
+     ist der Ring groß genug, dass das nicht auffällt – hier bewusst weggelassen. */
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff4f28 0deg,
+    #f85cbc 90deg,
+    #abf64c 200deg,
+    #ff4f28 360deg
+  );
+  z-index: 0;
+}
+
+.bsg-logo-inner {
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: #0a0a0f;
+  z-index: 1;
+}
+
+.bsg-logo-img {
+  position: absolute;
+  inset: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
+  z-index: 2;
 }
 
 /* Hamburger-Button (nur mobil sichtbar) */
@@ -203,7 +237,7 @@
      (Default ist min-width: auto), sonst drückt der lange Schriftzug den
      Hamburger-Button aus dem sichtbaren Bereich. */
   .bsg-logo { min-width: 0; gap: 0.4rem; font-size: clamp(0.85rem, 4.2vw, 1.1rem); }
-  .bsg-logo-img { width: 32px; height: 32px; }
+  .bsg-logo-wrap { width: 32px; height: 32px; }
   .bsg-logo span {
     min-width: 0;
     overflow: hidden;
